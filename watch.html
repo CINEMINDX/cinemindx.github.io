@@ -70,10 +70,10 @@ const q = new URLSearchParams(location.search);
 const type = q.get("type") === "tv" ? "tv" : "movie";
 let id = +q.get("id") || 0;
 let season = +q.get("s") || 1, ep = +q.get("e") || 1, cur = null;
-// اختبار تضمين صفحة Interstellar الأصلية من LookMovie2 فقط.
-// هذا لا يستخرج رابط الفيديو ولا يتجاوز تسجيل الدخول أو الاشتراك أو قيود التضمين.
-const LOOKMOVIE_TEST_ID = 157336;
-const LOOKMOVIE_TEST_URL = "https://www.lookmovie2.to/movies/view/0816692-interstellar-2014";
+// اختبار تضمين صفحة Interstellar من Cinema Box / Albox.
+// هذا يعرض صفحة العمل داخل iframe إذا كان مزود الخدمة يسمح بالتضمين.
+const ALBOX_TEST_ID = 157336;
+const ALBOX_TEST_URL = "https://cinema.albox.co/show/9098";
 const store = await new SourceStore().load(CONFIG.sourcesUrl);
 const sources = () => store.resolve(type, id, type === "tv" ? season : null, ep);
 
@@ -83,9 +83,9 @@ function play(srcs, i = 0, auto = false) {
   if (!auto) $("#note").textContent = "";
   if (!srcs.length) {
     $("#srcs").innerHTML = "";
-    if (type === "movie" && id === LOOKMOVIE_TEST_ID) {
-      $("#note").textContent = "اختبار تضمين صفحة الفيلم الأصلية؛ إذا منع LookMovie2 التضمين فستظهر مساحة فارغة أو رسالة من المتصفح.";
-      box.innerHTML = `<iframe src="${LOOKMOVIE_TEST_URL}" title="Interstellar — LookMovie2" allow="fullscreen; autoplay; encrypted-media; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+    if (type === "movie" && id === ALBOX_TEST_ID) {
+      $("#note").textContent = "اختبار تضمين صفحة Interstellar من Albox؛ إذا منع الموقع التضمين فستظهر رسالة أو مساحة فارغة.";
+      box.innerHTML = `<iframe src="${ALBOX_TEST_URL}" title="Interstellar — Albox" allow="fullscreen; autoplay; encrypted-media; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
     } else {
       box.innerHTML = `<div class="msg">${esc(T.nosrc)}</div>`;
     }
