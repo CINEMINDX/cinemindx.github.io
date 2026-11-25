@@ -1,53 +1,57 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#0b0907">
-  <title>Interstellar — CINEMIND_X</title>
-  <style>
-    :root{color-scheme:dark;--bg:#0b0907;--gold:#d4a64a;--line:#3a2d1c;--text:#f2e8d5}
-    *{box-sizing:border-box}
-    html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif}
-    body{padding:14px}
-    .wrap{max-width:1100px;margin:auto}
-    header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0 14px;margin-bottom:16px;border-bottom:1px solid var(--line)}
-    .logo{font-family:Georgia,serif;font-weight:800;letter-spacing:2px;color:var(--gold);font-size:22px}
-    a{color:var(--gold);text-decoration:none}
-    .back{border:1px solid var(--line);border-radius:9px;padding:8px 12px}
-    h1{font-size:clamp(20px,4vw,29px);margin:0 0 6px;color:var(--gold)}
-    .sub{margin:0 0 15px;color:#b9ad98;font-size:14px}
-    .player{position:relative;width:100%;aspect-ratio:16/9;min-height:230px;overflow:hidden;background:#000;border:1px solid var(--line);border-radius:12px}
-    .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000}
-    .hint{margin-top:12px;padding:11px 13px;border-right:3px solid var(--gold);background:#15110b;color:#c8b995;font-size:13px;line-height:1.8}
-    @media(max-width:600px){body{padding:10px}.player{border-radius:0;min-height:210px}header{padding-top:5px}}
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <header>
-      <div class="logo">CINEMIND_X</div>
-      <a class="back" href="./">العودة للمكتبة</a>
-    </header>
-    <main>
-      <h1>Interstellar (2014)</h1>
-      <p class="sub">مشاهدة داخل صفحة CINEMIND_X</p>
-      <div class="player">
-        <iframe
-          src="https://www.lookmovie2.to/movies/view/0816692-interstellar-2014"
-          title="Interstellar video"
-          allow="fullscreen; autoplay; encrypted-media; picture-in-picture"
-          allowfullscreen
-          referrerpolicy="strict-origin-when-cross-origin"
-          scrolling="no">
-        </iframe>
-      </div>
-      <div class="hint">
-        هذه نفس طريقة التجربة السابقة: تضمين صفحة LookMovie داخل إطار المشاهدة.
-        إذا بقيت الشاشة سوداء، فالموقع قد يكون منع التضمين أو غيّر طريقة عرضه؛
-        لا يستطيع ملف الموقع تجاوز منع التضمين. عندها نحتاج رابط مشغّل رسمي أو رابط بث مصرحاً به.
-      </div>
-    </main>
-  </div>
-</body>
-</html>
+<!doctype html>
+<html lang="ar" dir="rtl"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090807"><title>CINEMIND_X | مشاهدة</title>
+<style>
+:root{color-scheme:dark;--bg:#090807;--panel:#15110b;--gold:#d4a64a;--line:#493719;--text:#f4ead8;--muted:#b8aa91}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif}body{padding:14px}
+.wrap{max-width:1100px;margin:auto}header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0 14px;margin-bottom:18px;border-bottom:1px solid var(--line)}
+.logo{font-family:Georgia,serif;font-weight:800;letter-spacing:2px;color:var(--gold);font-size:22px}a{color:var(--gold);text-decoration:none}.back{border:1px solid var(--line);border-radius:9px;padding:8px 12px}
+.details{display:grid;grid-template-columns:170px minmax(0,1fr);gap:16px;align-items:start;margin-bottom:18px}
+.poster{width:100%;border-radius:12px;border:1px solid var(--line);display:block;background:#17120b;object-fit:cover}
+h1{font-size:clamp(21px,4vw,30px);margin:0 0 8px;color:var(--gold)}.meta{color:var(--muted);font-size:14px;line-height:1.9;margin-bottom:12px}.overview{font-size:15px;line-height:1.9;color:#e4d8c2;margin:0}
+.player-title{color:var(--gold);font-size:16px;margin:0 0 10px}.player{position:relative;width:100%;aspect-ratio:16/9;min-height:220px;overflow:hidden;background:#000;border:1px solid var(--line);border-radius:12px}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000}
+.notice,.state{margin-top:12px;padding:12px 14px;border:1px solid var(--line);border-right:3px solid var(--gold);border-radius:10px;background:var(--panel);color:#c8b995;font-size:13px;line-height:1.9}
+.hidden{display:none!important}
+@media(max-width:600px){body{padding:10px}.details{grid-template-columns:105px minmax(0,1fr);gap:12px}.player{min-height:200px;border-radius:8px}}
+</style></head><body><div class="wrap">
+<header><div class="logo">CINEMIND_X</div><a class="back" href="./">العودة للمكتبة</a></header>
+<main>
+<div id="loading" class="state">جاري تحميل معلومات العمل...</div><div id="error" class="state hidden"></div>
+<section id="content" class="hidden">
+<div class="details"><img id="poster" class="poster" alt="ملصق العمل"><div>
+<h1 id="title"></h1><div id="meta" class="meta"></div><p id="overview" class="overview"></p></div></div>
+<h2 class="player-title">المشاهدة</h2><div id="player" class="player"></div>
+<div id="notice" class="notice">تحميل المصدر...</div>
+</section></main></div>
+<script type="module">
+const $=id=>document.getElementById(id),p=new URLSearchParams(location.search);
+const raw=(p.get("type")||p.get("media_type")||"movie").toLowerCase(),type=["tv","show","series"].includes(raw)?"tv":"movie";
+let id=p.get("id")||p.get("tmdb_id")||p.get("tmdbId")||p.get("movie_id")||p.get("tv_id");
+const titleQ=p.get("title")||p.get("name")||"",yearQ=p.get("year")||"";
+let key="14169778c1429a0057cc2e019e83b463",lang="ar-IQ";
+try{key=localStorage.getItem("cm-key")||key;const l=localStorage.getItem("cm-lang");lang=({ar:"ar-IQ",en:"en-US",fr:"fr-FR",es:"es-ES",tr:"tr-TR",fa:"fa-IR"})[l]||lang}catch{}
+async function api(path){const u=new URL("https://api.themoviedb.org/3"+path);u.searchParams.set("api_key",key);u.searchParams.set("language",lang);const r=await fetch(u);if(!r.ok)throw Error("TMDB "+r.status);return r.json()}
+const slug=s=>(s||"").normalize("NFKD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+const year=d=>(d||"").slice(0,4);
+function fail(msg){$("loading").classList.add("hidden");$("error").textContent=msg;$("error").classList.remove("hidden")}
+try{
+ let item;
+ if(id&&/^\d+$/.test(id)) item=await api("/"+(type==="tv"?"tv":"movie")+"/"+id);
+ else if(titleQ){const s=await api("/search/"+(type==="tv"?"tv":"movie")+"?query="+encodeURIComponent(titleQ)+(yearQ?"&"+(type==="tv"?"first_air_date_year":"year")+"="+encodeURIComponent(yearQ):""));item=s.results?.[0];if(!item)throw Error("لم أجد هذا العنوان في TMDB.");id=String(item.id);item=await api("/"+(type==="tv"?"tv":"movie")+"/"+id)}
+ else throw Error("ما وصل رقم الفيلم من المكتبة. رابط صفحة المشاهدة لازم يحتوي id أو title.");
+ const ext=await api("/"+(type==="tv"?"tv":"movie")+"/"+id+"/external_ids");
+ const name=item.title||item.name||titleQ||"عمل سينمائي",original=item.original_title||item.original_name||name,y=year(item.release_date||item.first_air_date)||yearQ,imdb=(ext.imdb_id||"").replace(/^tt/,"");
+ $("title").textContent=name+(y?" ("+y+")":"");
+ $("meta").textContent=[y,item.vote_average?"⭐ "+Number(item.vote_average).toFixed(1)+"/10":"",(item.genres||[]).map(g=>g.name).join(" • "),item.runtime?item.runtime+" دقيقة":item.episode_run_time?.[0]?item.episode_run_time[0]+" دقيقة للحلقة":""].filter(Boolean).join("  |  ");
+ $("overview").textContent=item.overview||"لا يتوفر ملخص لهذا العمل حالياً.";
+ if(item.poster_path)$("poster").src="https://image.tmdb.org/t/p/w500"+item.poster_path;else $("poster").classList.add("hidden");
+ $("loading").classList.add("hidden");$("content").classList.remove("hidden");
+ if(imdb){const section=type==="tv"?"shows":"movies",url="https://www.lookmovie2.to/"+section+"/view/"+imdb+"-"+slug(original)+"-"+(y||"");
+ const frame=document.createElement("iframe");frame.src=url;frame.title="LookMovie — "+name;frame.allow="fullscreen; autoplay; encrypted-media; picture-in-picture";frame.allowFullscreen=true;frame.referrerPolicy="strict-origin-when-cross-origin";frame.loading="lazy";$("player").appendChild(frame);
+ $("notice").textContent="تم إنشاء رابط العنوان المطابق باستخدام IMDb. إذا لم يظهر أو بقيت الشاشة سوداء، فقد يكون العنوان غير متوفر أو أن LookMovie يمنع التضمين.";
+ }else{$("player").classList.add("hidden");$("notice").textContent="لم يتوفر IMDb ID لهذا العنوان، لذلك لم نضع رابط LookMovie غير مؤكد."}
+ document.title=name+" — CINEMIND_X";
+}catch(e){fail(e.message||"تعذر تحميل معلومات العمل.")}
+</script></body></html>
