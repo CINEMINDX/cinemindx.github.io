@@ -1,72 +1,53 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080808">
-  <title>CINEMIND_X | مشاهدة Interstellar</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0907">
+  <title>Interstellar — CINEMIND_X</title>
   <style>
-    :root { color-scheme: dark; --gold: #d6ad55; --bg: #080808; }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0; min-height: 100vh; background: var(--bg); color: #f5f5f5;
-      font-family: Arial, Tahoma, sans-serif;
-    }
-    header {
-      min-height: 66px; padding: 14px 5%; display: flex; align-items: center;
-      justify-content: space-between; gap: 14px; border-bottom: 1px solid #342817;
-      background: #0d0d0d;
-    }
-    .brand { color: var(--gold); font-weight: 800; letter-spacing: 1.5px; }
-    .back {
-      color: var(--gold); text-decoration: none; border: 1px solid #80632e;
-      border-radius: 8px; padding: 9px 14px; font-size: 14px;
-    }
-    main { width: min(1200px, 94%); margin: 24px auto; }
-    h1 { margin: 0 0 8px; font-size: clamp(20px, 4vw, 30px); }
-    .sub { color: #aaa; margin: 0 0 18px; font-size: 14px; }
-    .screen {
-      width: 100%; aspect-ratio: 16 / 9; min-height: 260px; background: #000;
-      border: 1px solid #4c3a1d; border-radius: 12px; overflow: hidden;
-      box-shadow: 0 12px 40px #000a;
-    }
-    iframe { display: block; width: 100%; height: 100%; border: 0; background: #000; }
-    .note {
-      margin-top: 14px; padding: 12px 14px; border-right: 3px solid var(--gold);
-      background: #15120d; color: #d6c8a8; line-height: 1.8; font-size: 13px;
-    }
-    @media (max-width: 600px) {
-      main { width: 100%; margin: 18px auto; }
-      h1, .sub, .note { margin-right: 4%; margin-left: 4%; }
-      .screen { aspect-ratio: 16 / 9; min-height: 220px; border-radius: 0; }
-      header { padding: 12px 4%; }
-    }
+    :root{color-scheme:dark;--bg:#0b0907;--gold:#d4a64a;--line:#3a2d1c;--text:#f2e8d5}
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif}
+    body{padding:14px}
+    .wrap{max-width:1100px;margin:auto}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0 14px;margin-bottom:16px;border-bottom:1px solid var(--line)}
+    .logo{font-family:Georgia,serif;font-weight:800;letter-spacing:2px;color:var(--gold);font-size:22px}
+    a{color:var(--gold);text-decoration:none}
+    .back{border:1px solid var(--line);border-radius:9px;padding:8px 12px}
+    h1{font-size:clamp(20px,4vw,29px);margin:0 0 6px;color:var(--gold)}
+    .sub{margin:0 0 15px;color:#b9ad98;font-size:14px}
+    .player{position:relative;width:100%;aspect-ratio:16/9;min-height:230px;overflow:hidden;background:#000;border:1px solid var(--line);border-radius:12px}
+    .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000}
+    .hint{margin-top:12px;padding:11px 13px;border-right:3px solid var(--gold);background:#15110b;color:#c8b995;font-size:13px;line-height:1.8}
+    @media(max-width:600px){body{padding:10px}.player{border-radius:0;min-height:210px}header{padding-top:5px}}
   </style>
 </head>
 <body>
-  <header>
-    <div class="brand">CINEMIND_X</div>
-    <a class="back" href="index.html">العودة للمكتبة</a>
-  </header>
-
-  <main>
-    <h1>Interstellar (2014)</h1>
-    <p class="sub">مشاهدة الفيلم داخل صفحة CINEMIND_X</p>
-
-    <section class="screen" aria-label="مشغل الفيلم">
-      <iframe
-        src="https://www.lookmovie2.to/movies/view/0816692-interstellar-2014"
-        title="Interstellar - LookMovie"
-        allow="autoplay; fullscreen; picture-in-picture"
-        allowfullscreen
-        referrerpolicy="strict-origin-when-cross-origin">
-      </iframe>
-    </section>
-
-    <div class="note">
-      إذا ظهرت رسالة رفض الاتصال أو بقيت الشاشة فارغة، فهذا يعني أن LookMovie يمنع عرض صفحته داخل مواقع أخرى.
-      لا يمكن لملف watch.html تجاوز هذا المنع؛ نحتاج تضميناً رسمياً أو رابط تشغيل مصرحاً به.
-    </div>
-  </main>
+  <div class="wrap">
+    <header>
+      <div class="logo">CINEMIND_X</div>
+      <a class="back" href="./">العودة للمكتبة</a>
+    </header>
+    <main>
+      <h1>Interstellar (2014)</h1>
+      <p class="sub">مشاهدة داخل صفحة CINEMIND_X</p>
+      <div class="player">
+        <iframe
+          src="https://www.lookmovie2.to/movies/view/0816692-interstellar-2014"
+          title="Interstellar video"
+          allow="fullscreen; autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen
+          referrerpolicy="strict-origin-when-cross-origin"
+          scrolling="no">
+        </iframe>
+      </div>
+      <div class="hint">
+        هذه نفس طريقة التجربة السابقة: تضمين صفحة LookMovie داخل إطار المشاهدة.
+        إذا بقيت الشاشة سوداء، فالموقع قد يكون منع التضمين أو غيّر طريقة عرضه؛
+        لا يستطيع ملف الموقع تجاوز منع التضمين. عندها نحتاج رابط مشغّل رسمي أو رابط بث مصرحاً به.
+      </div>
+    </main>
+  </div>
 </body>
 </html>
